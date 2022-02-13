@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap');
+
 html {
   box-sizing: border-box;
   font-size: 16px;
+  font-family: 'Lato', sans-serif;
 }
 
 *,
@@ -40,4 +43,53 @@ img {
 
 .loading {
   display: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+div.data div {
+  padding-bottom: 20px;
+}
+
+div.data div.name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+main {
+  border: 2px solid blue;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+div.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.name {
+  text-align: center;
+}
+
+button {
+  background-color: #c9ffff;
+  border: 1px solid #c9ffff;
+  border-radius: 8px;
+  height: 35px;
+  padding: 10px;
+}
+
+input {
+  height: 35px;
+  border-radius: 8px;
+  border: 1px #eee;
+  padding: 5px;
+  background-color: #eee;
 }

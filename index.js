@@ -25,10 +25,10 @@ function processData(data) {
 
 function draw(data) {
   document.querySelector('.name').textContent = data.name;
-  document.querySelector('.temp').textContent = data.temp;
-  document.querySelector('.pressure').textContent = data.pressure;
-  document.querySelector('.humidity').textContent = data.humidity;
-  document.querySelector('.wind-speed').textContent = data.winSpeed;
+  document.querySelector('.temp').textContent = data.temp.toFixed(0);
+  document.querySelector('.pressure').textContent = data.pressure.toFixed(0);
+  document.querySelector('.humidity').textContent = data.humidity.toFixed(0);
+  document.querySelector('.wind-speed').textContent = data.winSpeed.toFixed(0);
 }
 
 const dataContainer = document.querySelector('.data');
@@ -58,6 +58,12 @@ const searchInput = document.querySelector('input');
 
 button.addEventListener('click', (e) => {
   getAndDraw(searchInput.value);
+});
+
+searchInput.addEventListener('keyup', (e) => {
+  if (e.code == 'Enter') {
+    getAndDraw(searchInput.value);
+  }
 });
 
 getAndDraw('buenos aires');
